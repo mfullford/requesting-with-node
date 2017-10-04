@@ -1,5 +1,9 @@
+'use strict'
+
+
 var movie = require("./movie");
-var threeFavoriteMovies = [];
+var threeFavoriteMovies = ["American Beauty", "Baby Mama", "The Royal Tenenbaums"];
 threeFavoriteMovies.forEach(function(film){
-  // your code here
+  	//call on your movie modules
+  	movie(film);
 });

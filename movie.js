@@ -6,9 +6,10 @@
 	const apiKey = require("./env");
 	const apiId = require("./inv");
     const apiUrl = "https://www.googleapis.com/customsearch/v1?key="+apiKey+"&cx="+apiId+"&q="+movieTitle+"+movie";
+
     request(apiUrl, function (error, response, body) {
-        if (error) throw (error);
-        console.log(JSON.parse(body).items[0].title);
+        var parsedBody = JSON.parse(body).items[1].snippet;
+		console.log(parsedBody);
     });
  };
 
